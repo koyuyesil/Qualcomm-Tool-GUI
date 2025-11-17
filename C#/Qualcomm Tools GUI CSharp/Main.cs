@@ -106,7 +106,7 @@ namespace Qualcomm_Tools_GUI
         }
         private void Main_Load(object sender, EventArgs e)
         {
-            RichLogs("<+++++++++++      Qualcomm Tools GUI      +++++++++++>", Color.DarkOrange, true, true);
+            RichLogs("<+++++++++++       GUI      +++++++++++>", Color.DarkOrange, true, true);
             RichLogs("► Software  " + Constants.vbTab + ": ", Color.DarkOrange, true, false);
             RichLogs("Qualcomm Tool", Color.DarkOrange, true, true);
             RichLogs("► Version Tool  " + Constants.vbTab + ": ", Color.DarkOrange, true, false);
@@ -116,7 +116,7 @@ namespace Qualcomm_Tools_GUI
             RichLogs("► Version Base " + Constants.vbTab + ": ", Color.DarkOrange, true, false);
             RichLogs("Alpha I based [ 20-11-2022 ] Version", Color.DarkOrange, true, false);
             RichLogs("  ==========================================", Color.DarkOrange, true, true);
-            RichLogs("► Websites  " + Constants.vbTab + ":  https://facebook.com/f.hadikhoir/", Color.DarkOrange, true, false);
+            RichLogs("► Website  " + Constants.vbTab + ":  https://anitr.net/", Color.DarkOrange, true, false);
             RichLogs("  ==========================================", Color.DarkOrange, true, true);
             RichLogs(" ", Color.DarkOrange, true, true);
 
