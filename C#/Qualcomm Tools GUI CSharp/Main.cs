@@ -58,52 +58,40 @@ namespace Qualcomm_Tools_GUI
         #region UI
         private void RichTextBox_TextChanged(object sender, EventArgs e)
         {
-            RichTextBox.Invoke(new Action(() =>
+            rtxLogs.Invoke(new Action(() =>
                 {
-                    RichTextBox.SelectionStart = RichTextBox.Text.Length;
-                    RichTextBox.ScrollToCaret();
+                    rtxLogs.SelectionStart = rtxLogs.Text.Length;
+                    rtxLogs.ScrollToCaret();
                 }));
         }
         public void RichLogs(string msg, Color colour, bool isBold, bool NextLine = false)
         {
-            RichTextBox.Invoke(new Action(() =>
+            rtxLogs.Invoke(new Action(() =>
                 {
-                    RichTextBox.SelectionStart = RichTextBox.Text.Length;
-                    var selectionColor = RichTextBox.SelectionColor;
-                    RichTextBox.SelectionColor = colour;
+                    rtxLogs.SelectionStart = rtxLogs.Text.Length;
+                    var selectionColor = rtxLogs.SelectionColor;
+                    rtxLogs.SelectionColor = colour;
                     if (isBold)
                     {
-                        RichTextBox.SelectionFont = new Font(RichTextBox.Font, FontStyle.Bold);
+                        rtxLogs.SelectionFont = new Font(rtxLogs.Font, FontStyle.Bold);
                     }
                     else
                     {
-                        RichTextBox.SelectionFont = new Font(RichTextBox.Font, FontStyle.Regular);
+                        rtxLogs.SelectionFont = new Font(rtxLogs.Font, FontStyle.Regular);
                     }
-                    RichTextBox.AppendText(msg);
-                    RichTextBox.SelectionColor = selectionColor;
+                    rtxLogs.AppendText(msg);
+                    rtxLogs.SelectionColor = selectionColor;
                     if (NextLine)
                     {
-                        if (RichTextBox.TextLength > 0)
+                        if (rtxLogs.TextLength > 0)
                         {
-                            RichTextBox.AppendText(Constants.vbCrLf);
+                            rtxLogs.AppendText(Constants.vbCrLf);
                         }
                     }
                 }));
         }
 
-        public void Logs(string msg_0, Color color_0, string msg_1, Color color_1)
-        {
-            RichTextBox.Invoke(new Action(() =>
-                {
-                    RichTextBox.SelectionFont = new Font(RichTextBox.Font, FontStyle.Bold);
-                    RichTextBox.SelectionColor = color_0;
-                    RichTextBox.AppendText(msg_0);
-                    RichTextBox.SelectionColor = color_1;
-                    RichTextBox.AppendText(msg_1);
-                    RichTextBox.Refresh();
-                    RichTextBox.ScrollToCaret();
-                }));
-        }
+
         private void Main_Load(object sender, EventArgs e)
         {
             RichLogs("<+++++++++++       GUI      +++++++++++>", Color.DarkOrange, true, true);
@@ -203,7 +191,7 @@ namespace Qualcomm_Tools_GUI
             if (flags)
             {
                 WaktuCari = 60;
-                RichTextBox.Clear();
+                rtxLogs.Clear();
                 CariPorts();
                 if (PortQcom > 0)
                 {
@@ -244,7 +232,7 @@ namespace Qualcomm_Tools_GUI
             if (flags)
             {
                 WaktuCari = 60;
-                RichTextBox.Clear();
+                rtxLogs.Clear();
 
                 var flag = default(bool);
                 foreach (DataGridViewRow item in DataView.Rows)
@@ -388,7 +376,7 @@ namespace Qualcomm_Tools_GUI
             if (flags)
             {
                 WaktuCari = 60;
-                RichTextBox.Clear();
+                rtxLogs.Clear();
 
                 var flag = default(bool);
 
@@ -560,7 +548,7 @@ namespace Qualcomm_Tools_GUI
             if (flags)
             {
                 WaktuCari = 60;
-                RichTextBox.Clear();
+                rtxLogs.Clear();
 
                 var flag = default(bool);
 
@@ -885,7 +873,7 @@ namespace Qualcomm_Tools_GUI
             }
             else
             {
-                RichTextBox.Invoke(new Action(() => RichTextBox.Clear()));
+                rtxLogs.Invoke(new Action(() => rtxLogs.Clear()));
             }
         }
 

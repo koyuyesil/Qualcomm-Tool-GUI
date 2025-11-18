@@ -35,7 +35,7 @@ namespace Qualcomm_Tools_GUI
         [DebuggerStepThrough()]
         private void InitializeComponent()
         {
-            this.RichTextBox = new System.Windows.Forms.RichTextBox();
+            this.rtxLogs = new System.Windows.Forms.RichTextBox();
             this.btnrawxml = new System.Windows.Forms.Button();
             this.txtrawxml = new System.Windows.Forms.TextBox();
             this.Label1 = new System.Windows.Forms.Label();
@@ -68,14 +68,14 @@ namespace Qualcomm_Tools_GUI
             // 
             // RichTextBox
             // 
-            this.RichTextBox.BackColor = System.Drawing.Color.Black;
-            this.RichTextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RichTextBox.Location = new System.Drawing.Point(650, 39);
-            this.RichTextBox.Name = "RichTextBox";
-            this.RichTextBox.Size = new System.Drawing.Size(392, 368);
-            this.RichTextBox.TabIndex = 1;
-            this.RichTextBox.Text = "";
-            this.RichTextBox.TextChanged += new System.EventHandler(this.RichTextBox_TextChanged);
+            this.rtxLogs.BackColor = System.Drawing.Color.Black;
+            this.rtxLogs.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtxLogs.Location = new System.Drawing.Point(650, 39);
+            this.rtxLogs.Name = "RichTextBox";
+            this.rtxLogs.Size = new System.Drawing.Size(392, 368);
+            this.rtxLogs.TabIndex = 1;
+            this.rtxLogs.Text = "";
+            this.rtxLogs.TextChanged += new System.EventHandler(this.RichTextBox_TextChanged);
             // 
             // btnrawxml
             // 
@@ -137,7 +137,7 @@ namespace Qualcomm_Tools_GUI
             // labeltimer
             // 
             this.labeltimer.AutoSize = true;
-            this.labeltimer.Location = new System.Drawing.Point(1020, 15);
+            this.labeltimer.Location = new System.Drawing.Point(1005, 15);
             this.labeltimer.Name = "labeltimer";
             this.labeltimer.Size = new System.Drawing.Size(19, 13);
             this.labeltimer.TabIndex = 8;
@@ -319,7 +319,7 @@ namespace Qualcomm_Tools_GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 417);
+            this.ClientSize = new System.Drawing.Size(1154, 503);
             this.Controls.Add(this.CheckBoxAutoLoader);
             this.Controls.Add(this.btnerase);
             this.Controls.Add(this.cbreboot);
@@ -340,7 +340,7 @@ namespace Qualcomm_Tools_GUI
             this.Controls.Add(this.Label1);
             this.Controls.Add(this.txtrawxml);
             this.Controls.Add(this.btnrawxml);
-            this.Controls.Add(this.RichTextBox);
+            this.Controls.Add(this.rtxLogs);
             this.MaximizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -351,7 +351,7 @@ namespace Qualcomm_Tools_GUI
             this.PerformLayout();
 
         }
-        internal RichTextBox RichTextBox;
+        internal RichTextBox rtxLogs;
         internal Button btnrawxml;
         internal TextBox txtrawxml;
         internal Label Label1;
