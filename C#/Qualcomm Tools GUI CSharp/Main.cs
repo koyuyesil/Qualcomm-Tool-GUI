@@ -91,7 +91,19 @@ namespace Qualcomm_Tools_GUI
                 }));
         }
 
-
+        public void Logs(string msg_0, Color color_0, string msg_1, Color color_1)
+        {
+            rtxLogs.Invoke(new Action(() =>
+            {
+                rtxLogs.SelectionFont = new Font(rtxLogs.Font, FontStyle.Bold);
+                rtxLogs.SelectionColor = color_0;
+                rtxLogs.AppendText(msg_0);
+                rtxLogs.SelectionColor = color_1;
+                rtxLogs.AppendText(msg_1);
+                rtxLogs.Refresh();
+                rtxLogs.ScrollToCaret();
+            }));
+        }
         private void Main_Load(object sender, EventArgs e)
         {
             RichLogs("<+++++++++++       GUI      +++++++++++>", Color.DarkOrange, true, true);
